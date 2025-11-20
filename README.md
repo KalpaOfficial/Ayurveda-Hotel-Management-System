@@ -75,6 +75,15 @@ Overall, the system enhances the guest experience while simplifying daily tasks 
 # Getting Started
 
 1. Download the Zip File
+2. New terminal and type cd frontend or cd 'copy frontend path'
+3. npm start
+4. New terminal and type cd backend or cd 'copy backend path'
+5. npm start
+6. New terminal and type cd payment-frontend or cd 'copy backend path'
+7. npm run dev
+8. New terminal and type cd backend or cd 'copy backend path'
+9. node server.js
+
   
 
 # Contributing
