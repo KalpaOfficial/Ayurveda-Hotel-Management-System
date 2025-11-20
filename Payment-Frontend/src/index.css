@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset Vite defaults so pages can be full-width */
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  display: block;          /* ⬅ no flex centering */
+  place-items: initial;
+  background: #fff;        /* or your app bg */
+}
+
+#root {
+  max-width: none;         /* ⬅ no cap */
+  margin: 0;
+  padding: 0;              /* let each page control its own padding */
+  text-align: initial;
+}
