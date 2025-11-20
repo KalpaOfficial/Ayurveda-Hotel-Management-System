@@ -1,0 +1,449 @@
+/* Products Page */
+.products-page {
+  max-width: 1200px; /* keeps content centered */
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 120px; /* Add top padding to account for fixed navbar */
+}
+
+.products-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.products-hero-content h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 12px 0 16px;
+  background: linear-gradient(135deg, var(--ayurvedic-primary), var(--ayurvedic-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.products-hero-content p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.products-why h3 {
+  color: var(--ayurvedic-primary);
+  margin: 12px 0;
+}
+
+.products-why ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.products-hero-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  object-fit: cover;
+}
+
+.image-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0 8px;
+}
+
+.image-strip img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin: 24px 0 12px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Filter Bar (Search + Category in one row) */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.search-input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Category Filter Styles */
+/* No separate container needed when using filter-bar */
+
+.category-filter {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 200px;
+}
+
+.category-filter:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.clear-filter-btn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  border: 2px solid #d32f2f;
+  border-radius: 25px;
+  background-color: #d32f2f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.clear-filter-btn:hover {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;                /* Tighter space for compact cards */
+  justify-items: center;    /* Center cards inside grid cells */
+  margin: 0 auto;           /* Center the grid itself */
+  max-width: 1200px;        /* Increased max width to accommodate larger cards */ 
+
+/* Product Page */
+}.product-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  width: 280px; /* Compact width */
+  margin: 8px;
+  min-height: 400px; /* Compact height */
+  position: relative; /* enable overlay badge positioning */
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Stock badge overlay on image */
+.product-stock {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.product-details {
+  padding: 12px;
+  flex: 1; /* Allow details to expand and push buttons to bottom */
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem; /* base font for all inner text */
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: left;
+  color: #2e7d32;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* allow max 2 lines */
+  line-clamp: 2;              /* standard property for compatibility */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 40px;           /* keeps height consistent */
+  line-height: 1.2rem;        /* good spacing for two lines */
+}
+
+.product-category {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.product-description {
+  display: -webkit-box;
+  font-size: 0.9rem;
+  -webkit-line-clamp: 2;
+  margin-bottom: 1px;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 50px;  
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #d32f2f;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+.product-stock.in-stock {
+  color: #388e3c;
+  white-space: nowrap;
+  font-size: inherit;
+}
+
+.product-stock.out-stock {
+  color: #d32f2f;
+  white-space: nowrap;
+  font-size: inherit;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 12px; /* Add gap between buttons */
+}
+
+.btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+/* Cart and Buy Now Button Styles */
+.add-cart-btn {
+  background: #2e7d32;
+  color: white;
+  flex: 1;
+  min-width: 100px; /* Ensure minimum width */
+  max-width: 120px; /* Prevent buttons from being too wide */
+}
+
+.add-cart-btn:hover {
+  background: #1b5e20;
+}
+
+.add-cart-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.buy-now-btn {
+  background: #d32f2f;
+  color: white;
+  flex: 1;
+  min-width: 100px; /* Ensure minimum width */
+  max-width: 120px; /* Prevent buttons from being too wide */
+}
+
+.buy-now-btn:hover {
+  background: #ce1919;
+}
+
+.buy-now-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Quantity Selector Styles */
+.quantity-selector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center; /* Center the quantity selector */
+}
+
+/* Force quantity selector to be horizontal */
+.quantity-selector-container .quantity-selector {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: nowrap;
+}
+
+.quantity-selector-container .quantity-selector .qty-btn,
+.quantity-selector-container .quantity-selector .qty-input {
+  display: inline-flex !important;
+  flex-shrink: 0;
+}
+
+/* Override any global button styles that might cause stacking */
+.quantity-selector-container .quantity-selector button.qty-btn {
+  display: inline-flex !important;
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 !important;
+  float: none !important;
+  clear: none !important;
+}
+
+.quantity-selector-container .quantity-selector input.qty-input {
+  display: inline-block !important;
+  width: 60px !important;
+  height: 35px !important;
+  margin: 0 4px !important;
+  float: none !important;
+  clear: none !important;
+}
+
+/* Remove duplicate - handled by specific selector above */
+
+.qty-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex !important; /* Force inline-flex to stay in row */
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: background 0.2s ease;
+  font-size: 16px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.qty-btn:hover {
+  background: #e0e0e0;
+}
+
+.qty-input {
+  width: 60px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 0 4px; /* Add margin for better spacing */
+  display: inline-block !important; /* Force inline display */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.cancel-btn {
+  background: #757575;
+  color: white;
+  width: 100%;
+}
+
+.cancel-btn:hover {
+  background: #616161;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .products-page {
+    padding-top: 100px; /* Adjust for mobile navbar height */
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  
+  .product-card {
+    width: 100%;
+    max-width: 260px;
+    margin: 4px;
+  }
+  
+  .search-input {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-page {
+    padding-top: 90px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .product-card {
+    width: 100%;
+    max-width: 240px;
+    margin: 0;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .add-cart-btn,
+  .buy-now-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
