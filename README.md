@@ -51,19 +51,15 @@ Overall, the system enhances the guest experience while simplifying daily tasks 
 
 ## Home Page
 
-
-
-
-
-
-
-## User Dashboard
-
-
 ![Screenshot_20-11-2025_1629_localhost](https://github.com/user-attachments/assets/88d6ff2d-9312-43da-9184-d66f7cd02ce5)
 
+## Product Page
 
+![Screenshot_20-11-2025_16311_localhost](https://github.com/user-attachments/assets/a7affefe-2e16-4711-8a5c-592a8b0330ad)
 
+## Ayurveda Page
+
+![Screenshot_20-11-2025_16236_localhost](https://github.com/user-attachments/assets/19639acf-bc9e-4961-b9c6-9e182cae7e1d)
 
 
 ## Admin Dashboard
@@ -71,14 +67,15 @@ Overall, the system enhances the guest experience while simplifying daily tasks 
 ![Screenshot_20-11-2025_1671_localhost](https://github.com/user-attachments/assets/6302e320-e9f1-4bce-adc2-ae3cf1169500)
 
 
+## Booking Form
 
+![Screenshot_20-11-2025_16810_localhost](https://github.com/user-attachments/assets/ae959277-021c-4a6f-9c65-b376cfa02e1d)
 
 
 # Getting Started
 
-1. Download the database:
-
-   https://github.com/KalpaOfficial/2nd-year-1-Semester-Project-/tree/1db1083aef1577fd9fae1ec2e4a49ef56308966c/SQL
+1. Download the Zip File
+  
 
 # Contributing
 
